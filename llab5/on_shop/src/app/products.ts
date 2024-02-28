@@ -1,151 +1,125 @@
 export interface Product {
-    id: number;
-    image: string;
-    name: string;
-    description: string;
-    rating: number;
-    link: string;
-    like: number;
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+  rating: number;
+  link: string;
+  like: number;
 }
 
 export const products = [
     {
-        id: 1,
-        image: 'https://resources.cdn-kaspi.kz/img/m/p/h95/h0e/63961934823454.jpg?format=gallery-large',
-        name: 'Зарядное устройство Apple 20W USB-C Power Adapter белый',
-        description: 'тип: сетевая зарядка\n' +
-            'количество подключаемых устройств: 1\n' +
-            'быстрая зарядка: Да\n' +
-            'разъем подключения: USB Type-C',
-        rating: 4.5,
-        link: "https://kaspi.kz/shop/p/apple-20w-usb-c-power-adapter-belyi-100984093/?c=750000000",
-        category: "accessory",
-        like: 0,
+      id: 1,
+      image: 'https://cdn1.ozone.ru/s3/multimedia-w/c1200/6041139752.jpg',
+      name: 'Подушка-игрушка Кот Батон dlinii.kot, высота 110 см, серый',
+      description:
+        'Мягкая, милая игрушка-подушка в виде длинного серого кота не только украсит интерьер, но и поможет расслабиться. Игрушка выполнена из самого мягкого материала, который можно придумать - эластичного плюша, а наполнена нежнейшим холлофайбером. Плюшевого кота можно брать с собой в дальние поездки, чтобы подкладывать под шею или спину или же уютно обнять его для комфортного кино просмотра или прочтения книги в кровати.  Милый зверек всегда подстроится под вас и ваши желания',
+      rating: 4,
+      link:
+        'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
+      category: 'accessory',
+      like: 0,
     },
     {
-        id: 2,
-        image: 'https://resources.cdn-kaspi.kz/img/m/p/h32/h70/84378448199710.jpg?format=gallery-large',
-        name: 'Смартфон Apple iPhone 13 128Gb Midnight черный',
-        description: "технология NFC: Да\nцвет: черный\nтип экрана: OLED, Super Retina XDR\nдиагональ: 6.1 дюйм\nразмер оперативной памяти: 4 ГБ\nпроцессор: 6-ядерный Apple A15 Bionic\nобъем встроенной памяти: 128.0 ГБ\nемкость аккумулятора: 3095.0 мАч",
-        rating: 5,
-        link: "https://kaspi.kz/shop/p/apple-iphone-14-128gb-chernyi-106363023/?c=750000000",
-        category: "phone",
-        like: 0,
+      id: 2,
+      image: 'https://th.bing.com/th/id/OIP.FCKZrbOvR9yv61QSx1a_twHaGr?rs=1&pid=ImgDetMain',
+      name: 'Умная колонка Яндекс Станция Лайт фиолетовый',
+      description:
+        'Яндекс.Станция Лайт — это яркая и компактная умная колонка, которая управляется голосом и сенсорными кнопками. Она здорово украсит интерьер и сможет развлечь ребенка: матовый корпус приятно держать в руках, а расцветка порадует глаз. У Алисы в Станции Лайт свой характер — он зависит от цвета устройства. Чтобы пользоваться Станцией Лайт, нужны подключение к интернету по Wi-Fi и аккаунт на Яндексе.',
+      rating: { rate: 4.5, count: 0 },
+      link: 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
+      category: 'phone',
+      like: 0,
     },
     {
-        id: 3,
-        image: 'https://resources.cdn-kaspi.kz/img/m/p/h32/h70/84378448199710.jpg?format=gallery-large',
-        name: 'Смартфон Apple iPhone 14 128Gb черный',
-        description: "технология NFC: Да\n" +
-            "цвет: черный\n" +
-            "тип экрана: OLED, Super Retina XDR display\n" +
-            "диагональ: 6.1 дюйм\n" +
-            "размер оперативной памяти: 6 ГБ\n" +
-            "процессор: 6-ядерный Apple A15 Bionic\n" +
-            "объем встроенной памяти: 128.0 ГБ\n" +
-            "емкость аккумулятора: 3279.0 мАч",
-        rating: 4.5,
-        link: "https://kaspi.kz/shop/p/apple-iphone-14-128gb-chernyi-106363023/?c=750000000",
-        category: "phone",
-        like: 0,
+      id: 3,
+      image: 'https://main-cdn.sbermegamarket.ru/big1/hlr-system/-38/346/192/739/161/0/600010709343b0.jpeg',
+      name: 'Игровое кресло Defender Watcher, белый',
+      description:
+        'Стильное игровое кресло со встроенной подсветкой - удачное решение для геймеров, которые проводят много времени за компьютером. Откидывающаяся спинка и подставка для ног обеспечивают непревзойденный уровень комфорта. Кресло представлено в черном и белом цвете.',
+      rating: { rate: 3.9, count: 0 },
+      link: 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
+      category: 'phone',
+      like: 0,
     },
     {
-        id: 4,
-        image: 'https://resources.cdn-kaspi.kz/img/m/p/h02/ha0/79846423199774.jpg?format=gallery-large',
-        name: 'Смартфон Xiaomi Redmi Note 12 Pro 4G 8 ГБ/256 ГБ серый',
-        description: "технология NFC: Да\n" +
-            "цвет: серый\n" +
-            "тип экрана: AMOLED, сенсорный, мультитач\n" +
-            "диагональ: 6.67 дюйм\n" +
-            "размер оперативной памяти: 8 ГБ\n" +
-            "процессор: 8-ядерный Qualcomm Snapdragon 732G\n" +
-            "объем встроенной памяти: 256.0 ГБ\n" +
-            "емкость аккумулятора: 5000.0 мАч",
-        rating: 4.5,
-        link: "https://kaspi.kz/shop/p/apple-iphone-14-128gb-chernyi-106363023/?c=750000000",
-        category: "phone",
-        like: 0,
+      id: 4,
+      image: 'https://th.bing.com/th/id/OIP.kW0vwsI0pRBe4G2s51qaXQHaLA?rs=1&pid=ImgDetMain',
+      name: 'Кеды DD&OO 6901-BB белый 35',
+      description:
+        'Кроссовки женские, белые на шнурке, дополнительно золотистые шнурки, упакован в коробки. Особенности размера: мало мерят на один размер. Товар полностью соответствует фото.',
+      rating: { rate: 3.6, count: 0 },
+      link: 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
+      category: 'watch',
+      like: 0,
     },
     {
-        id: 5,
-        image: 'https://resources.cdn-kaspi.kz/img/m/p/hf5/hed/64420698554398.jpg?format=gallery-large',
-        name: 'Смарт-часы COLMI P28 Plus золотистый-бежевый',
-        description: "поддержка платформ: Android, ,iOS\n" +
-            "цвет корпуса: золотистый\n" +
-            "форма корпуса: прямоугольная\n" +
-            "интерфейсы: Bluetooth\n" +
-            "время работы: 3-7 дней",
-        rating: 5,
-        link: "https://kaspi.kz/shop/p/colmi-p28-plus-zolotistyi-bezhevyi-106175099/?c=750000000",
-        category: "watch",
-        like: 0,
+      id: 5,
+      image: 'https://www.clife.ru/upload/himg_cache/detail-middle/302/302aa591e399ab429be2e4beaecbd297/logitech_g102_lightsync_2.jpg',
+      name: 'Мышь Logitech G102 Lightsync черный',
+      description:
+        'Мышь проводная Logitech G102 LightSync позволяет играть с максимальной эффективностью. В мышке применяется датчик игрового уровня с чувствительностью 8000 dpi, регулируемой в широком диапазоне отдельной кнопкой. Logitech G102 LightSync оснащена 6 программируемыми кнопками. В левой и правой кнопках используется металлический пружинный механизм для исключительно точного срабатывания.',
+      rating: { rate: 3.0, count: 0 },
+      link: 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
+      category: 'watch',
+      like: 0,
     },
     {
-        id: 6,
-        image: 'https://resources.cdn-kaspi.kz/img/m/p/h62/h38/67432964784158.jpg?format=gallery-large',
-        name: 'Чехол OEM для Apple iPhone 13 прозрачный',
-        description: "тип: накладка\n" +
-            "совместимый бренд: Apple\n" +
-            "материал: силикон, ,пластик\n" +
-            "совместимые модели: iPhone 13",
-        rating: 5,
-        link: "https://kaspi.kz/shop/p/oem-dlja-apple-iphone-13-prozrachnyi-108272841/?c=750000000",
-        category: "accessory",
-        like: 0,
+      id: 6,
+      image: 'https://th.bing.com/th/id/OIP.MuYkULMwvv2JZjhpG-7XFQHaEs?rs=1&pid=ImgDetMain',
+      name: 'Стул N-12, 81x50x25 см, белый',
+      description:
+        'Благодаря сочетанию пластика с металлом и деревом изделие органично вписывается практически в любую среду, делая обстановку более естественной и «живой». Еще одно достоинство модели – удобная для обеденного стола высота',
+      rating: { rate: 3.3, count: 0 },
+      link: 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
+      category: 'phone',
+      like: 0,
     },
     {
-        id: 7,
-        image: 'https://resources.cdn-kaspi.kz/img/m/p/hbd/h2f/63829403140126.jpg?format=gallery-large',
-        name: 'Кабель Apple USB Type-C - Lightning 1 м',
-        description: "разъемы: Apple Lightning (M), ,USB TypeC (M)\n" +
-            "тип: кабель\n" +
-            "длина: 1.0 м",
-        rating: 4,
-        link: "https://kaspi.kz/shop/p/kabel-apple-usb-type-c---lightning-1-m-40500508/?c=750000000",
-        category: "accessory",
-        like: 0,
+      id: 7,
+      image: 'https://static.tildacdn.com/tild3964-6132-4231-a531-663937346436/PERFECT_HAIR__-_15__.png',
+      name: 'Ollin Professional Perfect Hair 15 в 1 спрей-кондиционер 250',
+      description:
+        'Уникальное многофункциональное средство заменит вам целых 15 продуктов для ухода за волосами. Легкий крем-спрей обладает потрясающими свойствами: он великолепно увлажняет и питает волосы, облегчает расчесывание, восстанавливает повреждения, обладает термозащитой и защищает цвет окрашенных волос, усиливая их яркость.',
+      rating: { rate: 3.2, count: 0 },
+      link: 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
+      category: 'watch',
+      like: 0,
     },
     {
-        id: 8,
-        image: 'https://resources.cdn-kaspi.kz/img/m/p/hb0/h7e/63639753555998.jpg?format=gallery-large',
-        name: 'Смарт-часы COLMI P28 Plus черный',
-        description: "поддержка платформ: Android, ,iOS\n" +
-            "цвет корпуса: черный\n" +
-            "форма корпуса: прямоугольная\n" +
-            "интерфейсы: Bluetooth\n" +
-            "время работы: 3-7 дней",
-        rating: 4.5,
-        link: "https://kaspi.kz/shop/p/colmi-p28-plus-chernyi-106096505/?c=750000000",
-        category: "watch",
-        like: 0,
+      id: 8,
+      image: 'https://a.lmcdn.ru/product/R/T/RTLABP476801_17574903_1_v1.jpg',
+      name: 'Herbal Essences Глубокое восстановление Марокканское Аргановое Масло шампунь 400 мл',
+      description:
+        'Веганский шампунь Herbal Essences (Хербал Эсенсес) Глубокое Восстановление из коллекции Марокканское аргановое масло подходит для поврежденных волос. Шампунь бережно очищает и глубоко восстанавливает волосы, наполняя их чарующим ароматом арганового масла. В результате волосы становятся более живыми, мягкими и блестящими.',
+      rating: { rate: 4.9, count: 0 },
+      link: 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
+      category: 'computer',
+      like: 0,
     },
     {
-        id: 9,
-        image: 'https://resources.cdn-kaspi.kz/img/m/p/ha9/h3b/67897720340510.jpg?format=gallery-large',
-        name: 'Стекло для Apple iPhone 11',
-        description: "тип: стекло\n" +
-            "совместимый бренд: Apple\n" +
-            "совместимые модели: iPhone 11\n" +
-            "назначение: дисплей\n" +
-            "вид покрытия: противоударное",
-        rating: 4.5,
-        link: "https://kaspi.kz/shop/p/steklo-dlja-apple-iphone-11-108450817/?c=750000000",
-        category: "accessory",
-        like: 0,
+      id: 9,
+      image: 'https://img.rukzakmania.ru/images/products/1/6667/365935115/Stilus-WiWU-Wi-Pencil-white-02.jpg',
+      name: 'Стилус TCM Pencil V2 белый',
+      description:
+        'TCM Pencil V2 - это стилус, который сочетает в себе высокое качество, универсальную совместимость и доступную цену. Он является отличной альтернативой дорогим стилусам от Apple, предлагая множество функций и превосходную производительность для вашего творчества и повседневных задач',
+      rating: { rate: 4.7, count: 0 },
+      link: 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
+      category: 'phone',
+      like: 0,
     },
     {
-        id: 10,
-        image: 'https://resources.cdn-kaspi.kz/img/m/p/h2e/h29/64381795991582.jpg?format=gallery-large',
-        name: 'Держатель для телефона Ali17express 2291',
-        description: "назначение: для смартфона\n" +
-            "тип: держатель\n" +
-            "место крепления держателя: универсальное, ,настольное\n" +
-            "способ крепления держателя: зажим",
-        rating: 4.5,
-        link: "https://kaspi.kz/shop/p/ali17express-2291-104227273/?c=750000000",
-        category: "accessory",
-        like: 0,
-    },
+      id: 10,
+      image: 'https://printermo.ru/images/styles/public/mini-printer-kittyprint-belo-goluboy_2.jpg',
+      name: 'Мини-принтер Centechia Mini голубой',
+      description:
+        'сделан из высокопрочного abs-пластика; полная зарядка 90 мин; мощный аккумулятор, разрешение 203x200 dpi; инструкция на русском языке',
+      rating: { rate: 3.8, count: 0 },
+      link: 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
+      category: 'watch',
+      like: 0,
+    },  
     {
         id: 11,
         name: "CASIO MTP-1374L-1AVDF",
