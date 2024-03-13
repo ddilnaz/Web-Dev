@@ -1,0 +1,6 @@
+<img src="{{ product.image }}">
+<h1>{{ product.name }}</h1>
+<p>{{ product.description }}</p>
+<h3>{{ product.rating }}/5</h3>
+<button class="like" (click)="like(product)">likes: {{ like }}</button>
+<!-- <button type="button" (click)="share(product.link)">Share</button> -->

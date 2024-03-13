@@ -1,113 +1,165 @@
 export interface Product {
+link: any;
   id: number;
   name: string;
-  price: number; 
-  image: string;
-  rating: {
-    rate: number;
-    count: number;
-  };
+  price: number;
   description: string;
-  url: string;
+  image: string;
+  address: string;
+  rating: string;
+  like: number;
 }
 
 export const products = [
   {
     id: 1,
-    name: 'Подушка-игрушка Кот Батон dlinii.kot, высота 110 см, серый',
-    price: 4300,
-    image : 'https://cdn1.ozone.ru/s3/multimedia-w/c1200/6041139752.jpg',
-    rating: { rate: 4.9, count: 140 },
-    url : 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
-    description: 'Мягкая, милая игрушка-подушка в виде длинного серого кота не только украсит интерьер, но и поможет расслабиться. Игрушка выполнена из самого мягкого материала, который можно придумать - эластичного плюша, а наполнена нежнейшим холлофайбером. Плюшевого кота можно брать с собой в дальние поездки, чтобы подкладывать под шею или спину или же уютно обнять его для комфортного кино просмотра или прочтения книги в кровати.  Милый зверек всегда подстроится под вас и ваши желания'
+    name: 'Книга Остин Дж.: Гордость и предубеждение',
+    price: 1109,
+    description: ' iSBN:  978-5-170-90332-0\n'+
+    'язык издания: русский \n'+
+    'переплет: мягкий переплет \n'+
+    'жанр: всемирная классика',
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/he9/h9b/63925229420574.jpg?format=gallery-medium',
+    address: 'https://kaspi.kz/shop/p/ostin-dzh-gordost-i-predubezhdenie-100326806/?c=750000000',
+    rating: 'https://www.searchenginejournal.com/wp-content/uploads/2021/08/a-guide-to-star-ratings-on-google-and-how-they-work-6123be39b9f2d-sej.jpg',
+    like:0
   },
   {
     id: 2,
-    name: 'Умная колонка Яндекс Станция Лайт фиолетовый',
-    price: 27000,
-    image : 'https://th.bing.com/th/id/OIP.FCKZrbOvR9yv61QSx1a_twHaGr?rs=1&pid=ImgDetMain',
-    rating: { rate: 4.5, count: 120 },
-    url : 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
-    description: 'Яндекс.Станция Лайт — это яркая и компактная умная колонка, которая управляется голосом и сенсорными кнопками. Она здорово украсит интерьер и сможет развлечь ребенка: матовый корпус приятно держать в руках, а расцветка порадует глаз. У Алисы в Станции Лайт свой характер — он зависит от цвета устройства. Чтобы пользоваться Станцией Лайт, нужны подключение к интернету по Wi-Fi и аккаунт на Яндексе. '
+    name: 'Книга Кристи А.: Десять негритят',
+    price: 1198,
+    description: ' iSBN: 978-5-041-03497-9\n'+
+    'язык издания: русский\n'+
+    'переплет: мягкий переплет\n'+
+    'жанр: остросюжетная литература',
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h3f/h8b/63926013886494.jpg?format=gallery-medium',
+    address: 'https://kaspi.kz/shop/p/kristi-a-desjat-negritjat-100329448/?c=750000000',
+    rating: 'https://www.searchenginejournal.com/wp-content/uploads/2021/08/a-guide-to-star-ratings-on-google-and-how-they-work-6123be39b9f2d-sej.jpg',
+    like:0
   },
   {
     id: 3,
-    name: 'Игровое кресло Defender Watcher, белый',
-    price: 71690,
-    image : 'https://main-cdn.sbermegamarket.ru/big1/hlr-system/-38/346/192/739/161/0/600010709343b0.jpeg',
-    rating: { rate: 3.9, count: 120 },
-    url : 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
-    description: 'Стильное игровое кресло со встроенной подсветкой - удачное решение для геймеров, которые проводят много времени за компьютером. Откидывающаяся спинка и подставка для ног обеспечивают непревзойденный уровень комфорта. Кресло представлено в черном и белом цвете.'
+    name: 'Книга Спаркс Н.: Спеши любить',
+    price: 1246,
+    description: ' iSBN: 9785171004262\n'+
+    'язык издания: русский\n'+
+    'переплет: мягкий переплет\n'+
+    'жанр: сентиментальная проза',
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/ha5/h1b/63846893322270.jpg?format=gallery-medium',
+    address: 'https://kaspi.kz/shop/p/sparks-n-speshi-ljubit--100259730/?c=750000000',
+    rating: 'https://www.searchenginejournal.com/wp-content/uploads/2021/08/a-guide-to-star-ratings-on-google-and-how-they-work-6123be39b9f2d-sej.jpg',
+    like:0
   },
   {
-     id: 4,
-    name: 'Кеды DD&OO 6901-BB белый 35',
-    price: 5600,
-    image : 'https://th.bing.com/th/id/OIP.kW0vwsI0pRBe4G2s51qaXQHaLA?rs=1&pid=ImgDetMain',
-    rating: { rate: 3.6, count: 120 },
-    url : 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
-    description: 'Кроссовки женские, белые на шнурке, дополнительно золотистые шнурки, упакован в коробки. Особенности размера : мало мерят на один размер. Товар полностью соответствует фото.'
+    id: 3,
+    name: 'Книга Кристи А.: Убийства по алфавиту',
+    price: 1247,
+    description: ' iSBN: 9785040996957\n'+
+    'язык издания: русский\n'+
+    'переплет: мягкий переплет\n'+
+    'жанр: остросюжетная литература',
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h1a/hb4/64342870753310.jpg?format=gallery-medium',
+    address: 'https://kaspi.kz/shop/p/kristi-a-ubiistva-po-alfavitu-101516844/?c=750000000',
+    rating: 'https://www.searchenginejournal.com/wp-content/uploads/2021/08/a-guide-to-star-ratings-on-google-and-how-they-work-6123be39b9f2d-sej.jpg',
+    like:0
+  },
+
+  {
+    id: 4,
+    name: 'Книга Әуезов М.: Абай жолы 1-4 том',
+    price: 7792,
+    description: 'iSBN: 9965-666-58-X\n'+
+    'возраст: 12+\n'+
+    'язык издания: казахский, ,русский\n'+
+    'переплет: твердый переплет\n'+
+    'жанр: казахская классика',
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/hda/he6/63766500212766.jpg?format=gallery-medium',
+    address: 'https://kaspi.kz/shop/p/-uezov-m-abai-zholy-1-4-tom-26016813/?c=750000000',
+    rating: 'https://avatars.mds.yandex.net/i?id=c53819e431a4213a4610cea7ad7ea1e9cb8633ea-9068727-images-thumbs&n=13',
+    like:0
   },
   {
     id: 5,
-    name : 'Мышь Logitech G102 Lightsync черный',
-    price: 8900,
-    image : 'https://www.clife.ru/upload/himg_cache/detail-middle/302/302aa591e399ab429be2e4beaecbd297/logitech_g102_lightsync_2.jpg',
-    rating: { rate: 3.0, count: 120 },
-    url : 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
-    description : 'Мышь проводная Logitech G102 LightSync позволяет играть с максимальной эффективностью. В мышке применяется датчик игрового уровня с чувствительностью 8000 dpi, регулируемой в широком диапазоне отдельной кнопкой. Logitech G102 LightSync оснащена 6 программируемыми кнопками. В левой и правой кнопках используется металлический пружинный механизм для исключительно точного срабатывания.'
+    name: 'Книга Браун Д.: Код да Винчи',
+    price: 1374,
+    description: ' iSBN: 978-5-17-086361-7\n'+
+    'возвраст: 16+\n'+
+    'язык издания: русский\n'+
+    'переплет: мягкий переплет\n'+
+    'жанр: остросюжетная литература',
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h8b/h85/63787960238110.jpg?format=gallery-medium',
+    address: 'https://kaspi.kz/shop/p/braun-d-kod-da-vinchi-26007967/?c=750000000',
+    rating: 'https://www.searchenginejournal.com/wp-content/uploads/2021/08/a-guide-to-star-ratings-on-google-and-how-they-work-6123be39b9f2d-sej.jpg',
+    like:0
   },
   {
     id: 6,
-    name: 'Стул N-12, 81x50x25 см, белый',
-    price: 7290,
-    image : 'https://th.bing.com/th/id/OIP.MuYkULMwvv2JZjhpG-7XFQHaEs?rs=1&pid=ImgDetMain',
-    rating: { rate: 3.3, count: 120 },
-    url : 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
-    description: 'Благодаря сочетанию пластика с металлом и деревом изделие органично вписывается практически в любую среду, делая обстановку более естественной и «живой». Еще одно достоинство модели – удобная для обеденного стола высота'
+    name: 'Книга Браун Д.: Цифровая крепость',
+    price: 4678,
+    description: ' iSBN:  978-5-17-080853-3\n'+
+    'возвраст: 16+\n'+
+    'язык издания: русский\n'+
+    'переплет: твердый переплет\n'+
+    'жанр: остросюжетная литература',
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h93/hdd/63778031796254.jpg?format=gallery-medium',
+    address: 'https://kaspi.kz/shop/p/braun-d-tsifrovaja-krepost--26002626/?c=750000000',
+    rating: 'https://www.searchenginejournal.com/wp-content/uploads/2021/08/a-guide-to-star-ratings-on-google-and-how-they-work-6123be39b9f2d-sej.jpg',
+    like:0
   },
   {
     id: 7,
-    name: 'Ollin Professional Perfect Hair 15 в 1 спрей-кондиционер 250',
-    price: 2900,
-   image : 'https://static.tildacdn.com/tild3964-6132-4231-a531-663937346436/PERFECT_HAIR__-_15__.png',
-    rating: { rate: 3.2, count: 120 },
-    url : 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
-    description: 'Уникальное многофункциональное средство заменит вам целых 15 продуктов для ухода за волосами. Легкий крем-спрей обладает потрясающими свойствами: он великолепно увлажняет и питает волосы, облегчает расчесывание, восстанавливает повреждения, обладает термозащитой и защищает цвет окрашенных волос, усиливая их яркость.'
+    name: 'Книга Киз Д.: Таинственная история Билли Миллигана',
+    price: 2236,
+    description:' iSBN: 9785040988389\n'+
+    'язык издания: русский\n'+
+    'переплет: мягкий переплет\n'+
+    'жанр: современная мировая проза', 
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h1b/h00/64215518937118.jpg?format=gallery-medium',
+    address: 'https://kaspi.kz/shop/p/kiz-d-tainstvennaja-istorija-billi-milligana-101187476/?c=750000000',
+    rating: 'https://avatars.mds.yandex.net/i?id=97cc1e747d7a51e9eb33cafade021f22a4e40a32-7451997-images-thumbs&n=13',
+    like:0
   },
   {
     id: 8,
-    name: 'Herbal Essences Глубокое восстановление Марокканское Аргановое Масло шампунь 400 мл',
-    price: 1900,
-    image : 'https://a.lmcdn.ru/product/R/T/RTLABP476801_17574903_1_v1.jpg',
-    rating: { rate: 4.9, count: 120 },
-    url : 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
-    description: 'Веганский шампунь Herbal Essences (Хербал Эсенсес) Глубокое Восстановление из коллекции Марокканское аргановое масло подходит для поврежденных волос. Шампунь бережно очищает и глубоко восстанавливает волосы, наполняя их чарующим ароматом арганового масла. В результате волосы становятся более живыми, мягкими и блестящими.'
+    name: 'Книга Кристи А.: Загадка Эндхауза',
+    price: 1007,
+    description: ' iSBN: 9785041045425\n'+
+    'возвраст: 16+\n'+
+    'язык издания: русский\n'+
+    'переплет: мягкий переплет\n'+
+    'жанр: остросюжетная литература',
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/hbd/hff/64227878207518.jpg?format=gallery-medium',
+    address: 'https://kaspi.kz/shop/p/kristi-a-zagadka-endhauza-101430368/?c=750000000',
+    rating: 'https://www.searchenginejournal.com/wp-content/uploads/2021/08/a-guide-to-star-ratings-on-google-and-how-they-work-6123be39b9f2d-sej.jpg',
+    like:0
   },
   {
     id: 9,
-    name: 'Стилус TCM Pencil V2 белый',
-    price: 6945,
-    image : 'https://img.rukzakmania.ru/images/products/1/6667/365935115/Stilus-WiWU-Wi-Pencil-white-02.jpg',
-    rating: { rate: 4.7, count: 233 },
-    url : 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
-    description: 'TCM Pencil V2 - это стилус, который сочетает в себе высокое качество, универсальную совместимость и доступную цену. Он является отличной альтернативой дорогим стилусам от Apple, предлагая множество функций и превосходную производительность для вашего творчества и повседневных задач'
+    name: 'Книга Уайльд О.: Портрет Дориана Грея',
+    price: 974,
+    description:' iSBN:  978-5-17-099056-6\n'+
+    'язык издания: русский \n'+
+    'переплет: мягкий переплет \n'+
+    'жанр: всемирная классика',
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h00/h64/64096830750750.jpg?format=gallery-medium',
+    address: 'https://kaspi.kz/shop/p/uail-d-o-portret-doriana-greja-100996924/?c=750000000',
+    rating: 'https://avatars.mds.yandex.net/i?id=c53819e431a4213a4610cea7ad7ea1e9cb8633ea-9068727-images-thumbs&n=13',
+    like:0
   },
   {
     id: 10,
-    name: 'Мини-принтер Centechia Mini голубой',
-    price: 7959,
-    image : 'https://printermo.ru/images/styles/public/mini-printer-kittyprint-belo-goluboy_2.jpg',
-    rating: { rate: 3.8, count: 220 },
-    url : 'https://kaspi.kz/shop/p/igrovoe-kreslo-defender-watcher-belyi-110723371/?c=750000000',
-    description: 'сделан из высокопрочного abs-пластика; полная зарядка 90 мин; мощный аккумулятор, разрешение 203x200 dpi; инструкция на русском языке'
+    name: 'Книга Кинг С.: Зеленая миля',
+    price: 1145,
+    description: 'iSBN: 9785171373580\n'+
+    'возраст: 16+\n'+
+    'язык издания: русский\n'+
+    'переплет: мягкий переплет\n'+
+    'жанр: фантастика',
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h19/h18/63992063590430.jpg?format=gallery-medium',
+    address: 'https://kaspi.kz/shop/p/king-s-zelenaja-milja-101800501/?c=750000000',
+    rating: 'https://www.searchenginejournal.com/wp-content/uploads/2021/08/a-guide-to-star-ratings-on-google-and-how-they-work-6123be39b9f2d-sej.jpg',
+    like:0
   }
-  
+
 ];
 
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/

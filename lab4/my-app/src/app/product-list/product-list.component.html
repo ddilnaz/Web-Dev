@@ -1,37 +1,29 @@
-<h2>Products</h2>
+<div class = "product-wrapper"*ngIf="category">
 
-<div *ngFor="let product of products">
 
-  <h3>
-    <a
-      [title]="product.name + ' details'"
-      [routerLink]="['/products', product.id]">
-      {{ product.name }}
-    </a>
-  </h3>
-  <p *ngIf="product.description">Description: {{ product.description }}</p>
-  <img src="{{ product.image }}" alt="{{ product.name }} Image" width="300" height="300">
+  <div class = "product-item" *ngFor="let product of category.products">
+    <img src="{{product.image}}">
+    <button class = "remove" (click)="removeProduct(product.id)">Remove</button>
+    <h3>
+      <a
+        [title]="product.name + ' details'"
+        [routerLink]="['/products', product.id]">
+        {{ product.name }}
+      </a>
+    </h3>
+    <p *ngIf="product.description">
+      {{ product.description.replace('\n','\n')}}
+    </p>
+    <div class="buttons-container">
+      <button type="button" (click)="shareOnTelegram('d1now1',product.address)">
+        Share
+      </button>
+      <button class = "kaspi" type="button" style="background-color:red"><a href="{{product.address}}}" style="color: rgb(255,255,255);">Kaspi</a></button><br>
+      <button class = "like" type="button" (click)="addLike(product)">
+        like: {{product.like}}
+      </button>
 
-  <button type="button" (click)="share(product)">
-    Share on WhatsApp
-  </button>
-  <br>
-  <a [href]="product.url" target="_blank">View Product</a> 
-  
-  <app-product-alerts
-    [product]="product" 
-    (notify)="onNotify()">
-  </app-product-alerts>
-  <p>
-    Rate:{{ product.rating.rate | number : "1.2-4"  }}
-  </p>
- 
+    </div>
+    <img class = "zvezda" src="{{product.rating}}">
+  </div>
 </div>
-
-
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
--->
-

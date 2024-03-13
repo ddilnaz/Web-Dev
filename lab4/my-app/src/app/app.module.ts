@@ -10,7 +10,11 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ShippingComponent } from './shipping/shipping.component'
+import { ShippingComponent } from './shipping/shipping.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { ProductItemComponent } from './product-item/product-item.component';
+
+
 
 @NgModule({
   imports: [
@@ -18,10 +22,13 @@ import { ShippingComponent } from './shipping/shipping.component'
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
+      { path: '', component: CategoriesComponent },
+      // {path: 'products', component: ProductListComponent},
       { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'categories/:categoryId', component: ProductListComponent},
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
+
     ])
   ],
   declarations: [
@@ -31,15 +38,12 @@ import { ShippingComponent } from './shipping/shipping.component'
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    CategoriesComponent,
+    ProductItemComponent
   ],
   bootstrap: [
     AppComponent
   ]
 })
 export class AppModule { }
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/
