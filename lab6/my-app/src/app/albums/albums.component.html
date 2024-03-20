@@ -1,0 +1,16 @@
+
+<div class="albums">
+
+        <input type="text" [(ngModel)]="newAlbum.title" id="title" placeholder="Add">
+        <button (click)="addAlbum()" class="Add">Add album</button>
+  
+    <div *ngFor="let album of albums" class="content">
+        <a [routerLink]="['/albums', album.id]" class="album-link">
+            <span>
+                {{album.id}} - {{album.title}}
+            </span>
+        </a>
+        <button (click)="removeAlbum(album.id)" class="remove-btn">Delete</button>
+    </div>
+
+</div>
